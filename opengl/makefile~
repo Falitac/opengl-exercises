@@ -1,0 +1,14 @@
+
+SFML_LIB = -lsfml-graphics
+SFML_LIB += -lsfml-audio
+SFML_LIB += -lsfml-window
+SFML_LIB += -lsfml-system
+SFML_LIB += -lsfml-network
+SFML_LIB += -lglew
+SFML_LIB += -lopengl32
+
+run: compile
+	a.exe
+
+compile:
+	g++ a.cpp -std=c++17 $(SFML_LIB)
